@@ -1,22 +1,23 @@
 Server:
-  Mode: debug #production release
+  Mode: dev #production release
   Port: 8080
   ReadTimeOut: 60
   WriteTimeOut: 60
 App:
   PageSize: 10
   Limit: 100
-  LogSavePath: storage/logs
-  LogFileName: app
-  LogFileExt: .log
+  LogFileName: "storage/web_app.log"
+  MaxSize: 200
+  MaxAge: 30
+  MaxBackups: 7
 DataBase:
   Type: mysql
   User: root
   Password: 1234567
   Host: 127.0.0.1
   Port: 3306
-  TableName: xxx
-  TablePrefix: xxx_
+  TableName: blog_service
+  TablePrefix: blog_
   Charset: utf8
   ParseTime: True
   MaxIdleConns: 10
